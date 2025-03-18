@@ -41,9 +41,26 @@ export default function MobileNav () {
          </SheetTrigger>
          <SheetContent className="flex flex-col">
             {/* Logo */}
-            <div>
-                Logo
+            <div className="mt-32 mb-40 text-center text-2xl">
+                <Link href="/">
+                <h1 className="text-4xl font-semibold">
+                    Pedro Arthur<span className="text-amber-400">.</span>
+                </h1>
+                </Link>
             </div>
+
+            {/* Nav */}
+            <nav className="flex flex-col justify-center items-center gap-8">
+                {links.map((link, index) => {
+                    return <Link 
+                    href={link.path}
+                    key={index} 
+                    className={`${link.path === pathname && "text-green-300 border-b-2 border-accent"} text-xl capitalize hover:text-green-300 transition-all`}>
+                        {link.name}
+                    </Link>
+                })}
+            </nav>
+
          </SheetContent>
        </Sheet>
     )

@@ -1,12 +1,12 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import Nav from "./Nav"
-import MobileNav from "./MobileNave"
+import MobileNav from "./MobileNav"
 
 
 export default function Header() {
     return (
-        <header className="py-8 xl:py-12 text-white bg-pink-50/10"> 
+        <header className="py-8 xl:py-12 text-white "> 
             <div className="container mx-auto flex justify-between items-center">
 
                 {/* LOGO */}
